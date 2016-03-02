@@ -1,0 +1,258 @@
+
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="horizontal"
+    android:id="@+id/scrollView">
+
+  <RelativeLayout
+     android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.suryaduggi.locationsettings.Setup_Settings"
+      android:id="@+id/Se">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:textColor="#D32F2F"
+        android:id="@+id/wifiNametextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+      <EditText
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@id/wifiNametextView"
+          android:layout_marginTop="15dp"
+          android:hint="Enter Title"
+          android:inputType="textPersonName"
+          android:id="@+id/titleEditText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/SeektextView"
+        android:layout_below="@+id/titleEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <SeekBar
+        android:layout_width="200dp"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:indeterminate="false"
+        android:layout_below="@+id/wifiNametextView"
+        android:layout_centerHorizontal="true" />
+
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:text="Ring Mode"
+          android:textSize="22dp"
+          android:id="@+id/ringModeTevtView"
+          android:layout_below="@+id/titleEditText"
+          android:gravity="left"
+          android:layout_marginTop="10dp"
+          android:textColor="#D32F2F" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:id="@+id/RadioGroup"
+        android:layout_below="@+id/wifiNametextView"
+        android:layout_centerHorizontal="true">
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal"
+            android:textColor="#D32F2F"
+            android:id="@+id/radioButtonNormal" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Silent"
+            android:textColor="#D32F2F"
+            android:id="@+id/radioButtonSilent" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vibration"
+            android:textColor="#D32F2F"
+            android:id="@+id/radioButtonVibrate" />
+    </RadioGroup>
+
+      <View android:id="@+id/primerdivisor"
+          android:layout_height="2dp"
+          android:layout_marginTop="10dp"
+          android:layout_width="fill_parent"
+          android:layout_below="@id/RadioGroup"
+          android:background="#ccc" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="22dp"
+          android:gravity="left"
+          android:layout_marginTop="12dp"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:text="Time Schedule"
+          android:id="@+id/TimescheduletextView"
+          android:textColor="#D32F2F"
+          android:layout_below="@+id/primerdivisor" />
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/TimescheduletextView"
+          android:gravity="left"
+          android:paddingTop="6dp"
+          android:textColor="#D32F2F"
+          android:layout_marginTop="12dp"
+          android:text="Activate Schedule Mode"
+          android:id="@+id/ActiveSMcheckBox" />
+
+      <TimePicker
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/timePicker"
+          android:textColor="#D32F2F"
+          android:layout_below="@+id/ActiveSMcheckBox"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="30dp" />
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/timePicker"
+          android:gravity="left"
+          android:paddingTop="6dp"
+          android:textColor="#D32F2F"
+          android:layout_marginTop="12dp"
+          android:text="SUN"
+          android:layout_alignStart="@id/timePicker"
+          android:id="@+id/SunCheckBox" />
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="MON"
+          android:id="@+id/MonCheckBox"
+          android:textColor="#D32F2F"
+          android:layout_below="@+id/timePicker"
+          android:layout_marginLeft="5dp"
+          android:layout_marginTop="10dp"
+          android:layout_alignBottom="@id/SunCheckBox"
+          android:layout_toRightOf="@+id/SunCheckBox"/>
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/SunCheckBox"
+          android:gravity="left"
+          android:textColor="#D32F2F"
+          android:paddingTop="6dp"
+          android:layout_marginTop="12dp"
+          android:text="TUE"
+          android:layout_alignStart="@id/timePicker"
+          android:id="@+id/TueCheckBox" />
+      <!--#D32F2F-->
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="WED"
+          android:id="@+id/WedCheckBox"
+          android:layout_below="@+id/MonCheckBox"
+          android:layout_marginLeft="8dp"
+          android:textColor="#D32F2F"
+          android:layout_marginTop="10dp"
+          android:layout_alignBottom="@id/TueCheckBox"
+          android:layout_toRightOf="@+id/TueCheckBox"/>
+
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/TueCheckBox"
+          android:gravity="left"
+          android:paddingTop="6dp"
+          android:textColor="#D32F2F"
+          android:layout_marginTop="12dp"
+          android:text="THU"
+          android:layout_alignStart="@id/timePicker"
+          android:id="@+id/ThuCheckBox" />
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="FRI"
+          android:id="@+id/FriCheckBox"
+          android:layout_below="@+id/WedCheckBox"
+          android:layout_marginLeft="8dp"
+          android:layout_marginTop="10dp"
+          android:textColor="#D32F2F"
+          android:layout_alignBottom="@id/ThuCheckBox"
+          android:layout_toRightOf="@+id/ThuCheckBox"/>
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/ThuCheckBox"
+          android:gravity="left"
+          android:textColor="#D32F2F"
+          android:paddingTop="6dp"
+          android:layout_marginTop="12dp"
+          android:text="SAT"
+          android:layout_alignStart="@id/timePicker"
+          android:id="@+id/SatCheckBox" />
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/SatCheckBox"
+          android:gravity="left"
+          android:textColor="#D32F2F"
+          android:paddingTop="7dp"
+          android:layout_marginTop="12dp"
+          android:text="Repeat"
+          android:id="@+id/RepeatcheckBox" />
+
+
+      <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:visibility="visible"
+        android:background="@drawable/gradient_style1"
+        android:id="@+id/doneButton"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/RepeatcheckBox"
+        android:layout_centerHorizontal="true"
+ />
+
+
+
+
+  </RelativeLayout>
+
+</ScrollView>
